@@ -13,14 +13,3 @@ asm: main.c lcd.h
 	avr-gcc -mmcu=atmega328p -S -O3 main.c -o main.asm
 
 
-
-
-test.ihex: test.elf
-	avr-objcopy -O ihex -R .eeprom test.elf test.ihex
-
-test.elf: testmain.c lcd.h
-	avr-gcc -mmcu=atmega328p -O3 testmain.c -o test.elf
-
-utest: test.ihex
-	sudo avrdude -p atmega328p -c arduino -P /dev/ttyUSB0 -b 115200 -U flash:w:test.ihex:i
-
