@@ -13,3 +13,5 @@ asm: main.c lcd.h
 	avr-gcc -mmcu=atmega328p -S -O3 main.c -o main.asm
 
 
+clean:
+	rm *.ihex *.o *.asm *.elf
