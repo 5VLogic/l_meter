@@ -1,3 +1,6 @@
+# Arduino compilation files
+.ihex
+
 # Prerequisites
 *.d
 
