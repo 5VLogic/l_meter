@@ -158,7 +158,7 @@ void main()
 			else if(power >= 6)
 				Lcd4_Write_String("uH");
 			else if(power >= 3)
-				Lcd4_Write_String("nH");
+				Lcd4_Write_String("mH");
 		}
 
 		else if(dmin == 0xffff)
